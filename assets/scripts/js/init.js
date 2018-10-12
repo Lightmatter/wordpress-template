@@ -85,7 +85,14 @@ Triggers.init($, Foundation);
 
 // Import JavaScript files.
 import appInit from './app';
+import menu from './menu';
 appInit;
+
+$(document).ready(function() {
+  menu.init();
+});
+
+
 
 // Import external plugins that do not utilize modules (e.g. Flickity).
 

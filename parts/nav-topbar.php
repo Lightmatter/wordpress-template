@@ -6,13 +6,14 @@
  */
 ?>
 
-<div class="top-bar" id="main-menu">
-	<div class="top-bar-left">
-		<ul class="menu">
-			<li><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></li>
-		</ul>
-	</div>
-	<div class="top-bar-right">
-		<?php lightmatter_top_nav(); ?>
-	</div>
+<div class="header-center">
+  <?php get_template_part( 'parts/logo', 'mixin' ); ?>
+</div>
+<div class="top-bar-center">
+  <?php lightmatter_top_nav(); ?>
+  <div class="bars toggle-mobile-menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
 </div>

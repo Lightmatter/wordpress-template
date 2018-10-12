@@ -57,3 +57,4 @@ Compiles and minifies all scripts and styles.
 TODO Format the following
 Gulp setup:
 ensure your local url is set up to match your locally hosted site (i.e. lightmatter.local or lightmater.dev)
+NOTE: make sure you use a .dev extension if possible for local development if you want to use browsersync (fixes slow load time bug)

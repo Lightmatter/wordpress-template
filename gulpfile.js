@@ -18,7 +18,7 @@ const atImport = require('postcss-import'),
 // Modify these variables to match your project needs
 
 // Set local URL if using Browser-Sync
-const LOCAL_URL = 'http://lightmattertemplate.local/';
+const LOCAL_URL = 'http://lightmatterwp.dev/';
 
 // Set path to Foundation files
 const FOUNDATION = 'node_modules/foundation-sites';

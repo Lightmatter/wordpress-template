@@ -1,0 +1,87 @@
+//Some opininated grid components for common use cases
+.half {
+  @include xy-grid();
+  justify-content: center;
+  margin: 40px 0;
+
+  @include breakpoint(medium) {
+    margin: 80px 0;
+  }
+
+  .image {
+    @include xy-cell(12);
+    @include breakpoint(medium) {
+      @include xy-cell(7);
+      display: flex;
+      justify-content: center;
+    }
+
+  }
+
+  .text {
+    @include xy-cell(12);
+    @include breakpoint(large) {
+      @include xy-cell(5);
+    }
+    @includd xy-grid('vertical')
+    align-items: flex-start;
+    text-align: left;
+
+    p, h2, a {
+      text-align: left;
+    }
+  }
+
+  &.reverse {
+    >*:first-child {
+      order: 1;
+      @include breakpoint(medium) {
+        order: 2;
+      }
+    }
+    >*:last-child {
+      order: 2;
+      @include breakpoint(medium) {
+        order: 1;
+      }
+    }
+  }
+
+  &.even {
+    .image {
+      @include breakpoint(medium) {
+        @include xy-cell(6);
+      }
+    }
+
+    .text {
+      @include breakpoint(large) {
+        @include xy-cell(6);
+      }
+    }
+  }
+}
+
+
+.half.middle {
+  .text {
+    @include xy-grid();
+    align-items: center;
+    align-content: center;
+
+    p, h2 {
+      width: 100%;
+    }
+  }
+}
+
+.half.bottom {
+  .text {
+    @include xy-grid();
+    align-items: flex-end;
+    align-content: flex-end;
+    p, h2 {
+      width: 100%;
+    }
+  }
+}

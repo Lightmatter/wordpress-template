@@ -1,1 +1,142 @@
-// header scss goes here
+//TODO make header less opininated?
+.logo {
+  width: 160px;
+}
+
+.bars {
+  @extend .show-for-small-only;
+  color: $black;
+  font-size: 30px;
+
+  > span {
+    width: 30px;
+    height: 5px;
+    margin-bottom: 4px;
+    display: block;
+    background-color: $black;
+    border-radius: 5px;
+  }
+ }
+
+header {
+
+  .top-bar-center .accordion-menu {
+    @include breakpoint(small only) {
+      height: auto;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height .5s linear, padding .2s linear;
+      padding: 0;
+
+      > li {
+        max-width: 90%;
+        margin: 0 auto 1rem;
+      }
+
+      &.is-active {
+        max-height: 700px;
+        padding: 10px 0;
+      }
+    }
+  }
+  li {
+    list-style: none;
+    display: block;
+
+    @include breakpoint(small only) {
+      font-size: 18px;
+      position: relative;
+
+      &.is-accordion-submenu-parent > a:after {
+        content: "\f078";
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        position: absolute;
+        right: 20px;
+      }
+
+      &.is-accordion-submenu-parent[aria-expanded='true'] {
+        background-color: $black;
+
+        > a:after {
+          content: "\f077";
+        }
+
+      }
+      a {
+        width: 100%;
+        display: block;
+      }
+
+      .is-accordion-submenu {
+        padding-top: 10px;
+      }
+
+    }
+
+    @include breakpoint(medium) {
+      display: inline-block;
+    }
+  }
+
+  a {
+    color: $black;
+    text-transform: uppercase;
+  }
+}
+
+.header-center {
+  @include xy-grid();
+  width: 100%;
+  justify-content: center;
+  margin: 20px 0;
+
+  @include breakpoint(medium) {
+    margin: 40px 0;
+  }
+}
+
+.top-bar-center {
+  @include xy-grid();
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 10px 0;
+
+  > ul {
+    margin-left: 0;
+    text-align: center;
+    width: $global-width;
+    margin-bottom: 24px;
+
+    @include breakpoint(medium) {
+      padding: 10px 0;
+    }
+
+    ul {
+      margin-left: 0;
+      min-width: unset !important;
+      padding: 7px 0;
+
+      li {
+        &:not(:last-child) {
+          margin-bottom: 7px;
+        }
+        @include breakpoint(medium) {
+          text-align: left;
+        }
+
+        a {
+          white-space: nowrap;
+        }
+      }
+    }
+  }
+}
+
+.single-events,
+.post-type-archive-press {
+  .top-bar-center > ul {
+    margin-bottom: 50px;
+  }
+}

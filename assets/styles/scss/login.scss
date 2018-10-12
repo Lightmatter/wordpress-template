@@ -15,16 +15,19 @@ http://codex.wordpress.org/Creating_Admin_Themes
 ******************************************************************/
 
 body.login {
-	
+
 }
 
 #login {
-	
+
 }
 
 // Change the login logo
 .login h1 a {
-	background: url(../images/login-logo.png) no-repeat top center;
+	background-image: url(../images/login-logo.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top center;
 	width: 326px;
 	height: 67px;
 	text-indent: -9999px;
@@ -43,5 +46,5 @@ body form .input {
 
 // Login Button Style
 #wp-submit {
-	
+
 }
