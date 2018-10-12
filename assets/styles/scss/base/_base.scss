@@ -1,0 +1,15 @@
+@import 'mixins';
+@import 'variables';
+@import 'typography';
+@import 'buttons';
+@import "header";
+@import "footer";
+
+html, body {
+  overflow-x: hidden;
+}
+body {
+  .container {
+    @include xy-grid-container();
+  }
+}

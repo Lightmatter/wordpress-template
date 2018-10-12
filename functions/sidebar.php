@@ -1,10 +1,10 @@
 <?php
 // SIDEBARS AND WIDGETIZED AREAS
-function joints_register_sidebars() {
+function lightmatter_register_sidebars() {
 	register_sidebar(array(
 		'id' => 'sidebar1',
-		'name' => __('Sidebar 1', 'jointswp'),
-		'description' => __('The first (primary) sidebar.', 'jointswp'),
+		'name' => __('Sidebar 1', 'lightmatter'),
+		'description' => __('The first (primary) sidebar.', 'lightmatter'),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<h4 class="widgettitle">',
@@ -13,8 +13,8 @@ function joints_register_sidebars() {
 
 	register_sidebar(array(
 		'id' => 'offcanvas',
-		'name' => __('Offcanvas', 'jointswp'),
-		'description' => __('The offcanvas sidebar.', 'jointswp'),
+		'name' => __('Offcanvas', 'lightmatter'),
+		'description' => __('The offcanvalightmatterbar.', 'lightmatter'),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<h4 class="widgettitle">',
@@ -31,8 +31,8 @@ function joints_register_sidebars() {
 
 	register_sidebar(array(
 		'id' => 'sidebar2',
-		'name' => __('Sidebar 2', 'jointswp'),
-		'description' => __('The second (secondary) sidebar.', 'jointswp'),
+		'name' => __('Sidebar 2', 'lightmatter'),
+		'description' => __('The second (secondary) sidebar.', 'lightmatter'),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<h4 class="widgettitle">',
@@ -47,4 +47,4 @@ function joints_register_sidebars() {
 	*/
 } /* end register sidebars */
 
-add_action( 'widgets_init', 'joints_register_sidebars' );
+add_action( 'widgets_init', 'lightmatter_register_sidebars' );

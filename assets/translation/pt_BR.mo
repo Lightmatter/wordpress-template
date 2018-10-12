@@ -329,17 +329,17 @@ msgid "Search for:"
 msgstr "Procurar por:"
 
 #: searchform.php:4
-msgctxt "jointswp"
+msgctxt "lightmatter"
 msgid "Search..."
 msgstr "Procurar…"
 
 #: searchform.php:4
-msgctxt "jointswp"
+msgctxt "lightmatter"
 msgid "Search for:"
 msgstr "Procurar por:"
 
 #: searchform.php:6
-msgctxt "jointswp"
+msgctxt "lightmatter"
 msgid "Search"
 msgstr "Procurar"
 

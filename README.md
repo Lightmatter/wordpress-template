@@ -1,19 +1,19 @@
 Currently using Foundation 6.4.3.
 
-## JointsWP Requirements
-JointsWP requires [Node.js](https://nodejs.org) v6.9.x or newer. This doesn't mean you need to understand Node (or even Gulp) - it's just the steps we need to take to make sure all of our development tools are installed. 
+## LightmatterWP Requirements
+LightmatterWP requires [Node.js](https://nodejs.org) v6.9.x or newer. This doesn't mean you need to understand Node (or even Gulp) - it's just the steps we need to take to make sure all of our development tools are installed.
 
-## Getting Started 
-### Download JointsWP and install dependencies with npm 
+## Getting Started
+### Download LightmatterWP and install dependencies with npm
 ```bash
 $ cd my-wordpress-folder/wp-content/themes/
-$ git clone https://github.com/JeremyEnglert/JointsWP.git
-$ cd JointsWP
+$ git clone https://github.com/Lightmatter/wordpress-template.git
+$ cd LightmatterWP
 $ npm install
 ```
-At this point, JointsWP should be installed and fully running on your local machine. If you prefer to install the theme manually, that will work as well - just be sure to run `npm install` after manually moving the files into the `/themes/` directory.
+At this point, LightmatterWP should be installed and fully running on your local machine. If you prefer to install the theme manually, that will work as well - just be sure to run `npm install` after manually moving the files into the `/themes/` directory.
 
-## Working with JointsWP
+## Working with LightmatterWP
 ### Watching for Changes
 ```bash
 $ npm run watch
@@ -26,7 +26,7 @@ $ npm run watch
 ```bash
 $ npm run browsersync
 ```
-This will watch the same files as `npm run watch`, but utilizes browsersync for live reloading and style injection. Be sure to update the `URL` variable in the `gulpfile.js` to your local install URL. 
+This will watch the same files as `npm run watch`, but utilizes browsersync for live reloading and style injection. Be sure to update the `URL` variable in the `gulpfile.js` to your local install URL.
 
 ## Compile and Minify All Theme Assets
 ```bash
@@ -52,3 +52,8 @@ Compiles and minifies all scripts and styles.
 
 ### Images
 * `assets/images/` - place your theme images here. Each image will be optimized when the build process is ran.
+
+
+TODO Format the following
+Gulp setup:
+ensure your local url is set up to match your locally hosted site (i.e. lightmatter.local or lightmater.dev)

@@ -1,14 +1,14 @@
 {
-	"name": "jointswp-sass",
-	"version": "5.0.0",
+	"name": "lightmatter-wordpress",
+	"version": "1.0.0",
 	"description": "A WordPress starter theme using Foundation 6",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/JeremyEnglert/JointsWP.git"
+		"url": "https://github.com/Lightmatter/wordpress-template.git"
 	},
-	"author": "Jeremy Englert",
+	"author": "Brian Edelman",
 	"license": "GPL-2.0 AND MIT",
-	"homepage": "https://github.com/JeremyEnglert/JointsWP",
+	"homepage": "https://github.com/Lightmatter",
 	"dependencies": {
 		"foundation-sites": "^6.4.4-rc1",
 		"jquery": "^3.2.1",

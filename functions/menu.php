@@ -2,13 +2,13 @@
 // Register menus
 register_nav_menus(
 	array(
-		'main-nav' => __( 'The Main Menu', 'jointswp' ),   // Main nav in header
-		'footer-links' => __( 'Footer Links', 'jointswp' ) // Secondary nav in footer
+		'main-nav' => __( 'The Main Menu', 'lightmatter' ),   // Main nav in header
+		'footer-links' => __( 'Footer Links', 'lightmatter' ) // Secondary nav in footer
 	)
 );
 
 // The Top Menu
-function joints_top_nav() {
+function lightmatter_top_nav() {
 	 wp_nav_menu(array(
         'container' => false,                           // Remove nav container
         'menu_class' => 'medium-horizontal menu',       // Adding custom nav class
@@ -18,7 +18,7 @@ function joints_top_nav() {
         'fallback_cb' => false,                         // Fallback function (see below)
         'walker' => new Topbar_Menu_Walker()
     ));
-} 
+}
 
 // Big thanks to Brett Mason (https://github.com/brettsmason) for the awesome walker
 class Topbar_Menu_Walker extends Walker_Nav_Menu {
@@ -29,7 +29,7 @@ class Topbar_Menu_Walker extends Walker_Nav_Menu {
 }
 
 // The Off Canvas Menu
-function joints_off_canvas_nav() {
+function lightmatter_off_canvas_nav() {
 	 wp_nav_menu(array(
         'container' => false,                           // Remove nav container
         'menu_class' => 'vertical menu accordion-menu',       			// Adding custom nav class
@@ -39,7 +39,7 @@ function joints_off_canvas_nav() {
         'fallback_cb' => false,                         // Fallback function (see below)
         'walker' => new Off_Canvas_Menu_Walker()
     ));
-} 
+}
 
 class Off_Canvas_Menu_Walker extends Walker_Nav_Menu {
     function start_lvl(&$output, $depth = 0, $args = Array() ) {
@@ -49,10 +49,10 @@ class Off_Canvas_Menu_Walker extends Walker_Nav_Menu {
 }
 
 // The Footer Menu
-function joints_footer_links() {
+function lightmatter_footer_links() {
     wp_nav_menu(array(
     	'container' => 'false',                         // Remove nav container
-    	'menu' => __( 'Footer Links', 'jointswp' ),   	// Nav name
+    	'menu' => __( 'Footer Links', 'lightmatter' ),   	// Nav name
     	'menu_class' => 'menu',      					// Adding custom nav class
     	'theme_location' => 'footer-links',             // Where it's located in the theme
         'depth' => 0,                                   // Limit the depth of the nav
@@ -61,7 +61,7 @@ function joints_footer_links() {
 } /* End Footer Menu */
 
 // Header Fallback Menu
-function joints_main_nav_fallback() {
+function lightmatter_main_nav_fallback() {
 	wp_page_menu( array(
 		'show_home' => true,
     	'menu_class' => '',      						// Adding custom nav class
@@ -74,7 +74,7 @@ function joints_main_nav_fallback() {
 }
 
 // Footer Fallback Menu
-function joints_footer_links_fallback() {
+function lightmatter_footer_links_fallback() {
 	/* You can put a default here if you like */
 }
 

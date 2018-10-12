@@ -2,7 +2,7 @@
 /**
  * The off-canvas menu uses the Off-Canvas Component
  *
- * For more info: http://jointswp.com/docs/responsive-navigation/
+ * For more info: http://lightmatter.com/docs/responsive-navigation/
  */
 ?>
 
@@ -13,6 +13,6 @@
 		</ul>
 	</div>
 	<div class="top-bar-right">
-		<?php joints_top_nav(); ?>
+		<?php lightmatter_top_nav(); ?>
 	</div>
 </div>

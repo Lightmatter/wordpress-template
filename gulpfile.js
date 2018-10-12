@@ -18,7 +18,7 @@ const atImport = require('postcss-import'),
 // Modify these variables to match your project needs
 
 // Set local URL if using Browser-Sync
-const LOCAL_URL = 'http://jointswp-github.dev/';
+const LOCAL_URL = 'http://lightmattertemplate.local/';
 
 // Set path to Foundation files
 const FOUNDATION = 'node_modules/foundation-sites';
@@ -46,6 +46,12 @@ const ASSETS = {
 	all: 'assets/',
 };
 
+const DIST = {
+	styles: 'dist/styles/',
+	scripts: 'dist/scripts/',
+	images: 'dist/images/',
+	all: 'dist/',
+};
 const JSHINT_CONFIG = {
 	node: true,
 	globals: {
@@ -74,7 +80,7 @@ gulp.task('scripts', function() {
 		.pipe(plugin.jshint(JSHINT_CONFIG))
 		.pipe(plugin.jshint.reporter('jshint-stylish'))
 		.pipe(CUSTOMFILTER.restore)
-		.pipe(gulp.dest(ASSETS.scripts));
+		.pipe(gulp.dest(DIST.scripts));
 });
 
 // Compile, postcss and minify SCSS.
@@ -96,7 +102,7 @@ gulp.task('styles', function() {
 		.pipe(plugin.sass()) // Compile SCSS to CSS.
 		.pipe(plugin.postcss(PROCESSORS)) // Process CSS with custom plugins.
 		.pipe(plugin.sourcemaps.write('.')) // Write sourcemaps.
-		.pipe(gulp.dest(ASSETS.styles))
+		.pipe(gulp.dest(DIST.styles))
 		.pipe(
 			browserSync.reload({
 				stream: true,
@@ -136,7 +142,7 @@ gulp.task('images', function() {
 		.src(SOURCE.images)
 		.pipe(plugin.plumber(SHOW_ERROR)) // Show errors happening in the piping process.
 		.pipe(plugin.imagemin(PROCESSORS.plugins, PROCESSORS.options))
-		.pipe(gulp.dest(ASSETS.images));
+		.pipe(gulp.dest(DIST.images));
 });
 
 gulp.task('translate', function() {
@@ -145,11 +151,11 @@ gulp.task('translate', function() {
 		.pipe(plugin.plumber(SHOW_ERROR)) // Show errors happening in the piping process.
 		.pipe(
 			plugin.wpPot({
-				domain: 'jointswp',
+				domain: 'lightmatter',
 				package: 'Example project',
 			})
 		)
-		.pipe(gulp.dest('assets/translation/translation.pot'));
+		.pipe(gulp.dest('dist/translation/translation.pot'));
 });
 
 // Browser-Sync watch files and inject changes.

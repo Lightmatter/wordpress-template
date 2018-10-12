@@ -54,17 +54,17 @@ msgid "Search for:"
 msgstr ""
 
 #: searchform.php:10
-msgctxt "jointswp"
+msgctxt "lightmatter"
 msgid "Search..."
 msgstr ""
 
 #: searchform.php:10
-msgctxt "jointswp"
+msgctxt "lightmatter"
 msgid "Search for:"
 msgstr ""
 
 #: searchform.php:12
-msgctxt "jointswp"
+msgctxt "lightmatter"
 msgid "Search"
 msgstr ""
 
